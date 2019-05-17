@@ -1,0 +1,2154 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<link href="css/main.css" rel="stylesheet">
+	<!-- <link href="boden.html" > -->
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<title>Sounding Soil</title>
+
+	<section class="header">
+
+		<div id='cssmenu'>
+			<ul id="tabs-list">
+				<li id='index' class='active'><a href='#tab-bodenmap'>Soundmap</a></li>
+				<li id='index2'><a href='#tab-muensingen'>Schwand</a></li>
+				<li id='boden'><a href='#tab-bodenhoeren'>Dem Boden zuhören</a></li>
+				<li id='bodenwissen'><a href='#tab-bodenwissen'>Bodenwissen</a></li>
+				<li id='bodenbewusstsein'><a href='#tab-bodenbewusst'>Bodenbewusst</a></li>
+				<li id='englisch'><a href='#tab-english'>Englisch Information</a></li>
+				<li id='kontakt'><a href='#tab-kontakt'>Kontakt</a></li>
+			</ul>
+		</div>
+
+	</section>
+
+</head>
+
+
+
+<body>
+
+	<section class="border">
+
+		<div id="left2"></div>
+		<div id="left3"></div>
+		<div id="left4"></div>
+		<div id="left5"></div>
+
+		<div id="top2"></div>
+		<div id="top3"></div>
+		<div id="top4"></div>
+		<div id="top5"></div>
+
+		<div id="right2"></div>
+		<div id="right3"></div>
+		<div id="right4"></div>
+		<div id="right5"></div>
+
+		<div id="bottom2"></div>
+		<div id="bottom3"></div>
+		<div id="bottom4"></div>
+		<div id="bottom5"></div>
+
+	</section>
+
+
+	<section class="body">
+
+
+		<div id="tabs-container" style="width:100%;height:100%">
+
+
+			<div id="tab-bodenmap" class="tab-content">
+
+				<div class="alert" id="alert">
+					<p class="alerttext">
+						Vergrösseren sie Ihr Browser-Fenster um die Soundmap zu sehen.
+					</p>
+				</div>
+
+				<div id="statistics">
+
+				</div>
+
+				<div class="soundmap" id="soundmap">
+					<img src="image/soundmap.png" id="map">
+
+					<div class="img" id="img" onclick="oneClick(event, this);">
+
+						<!-- Muensingen nur link -->
+						<a href="#tab-muensingen">
+							<div id="1001" class="one" " style=" top: 47.5%; left: 37.5%;"onclick="goto_muensingen();">
+							</div>
+						</a>
+
+						<!-- Oberriet 1 -->
+						<div id="1" class="one" onclick="twoClick(event, this, id);" style="top: 20.5%; left: 70.5%;">
+							<div class="dropdown" id="dd1">
+
+								<p class="text" id="text">
+									Oberriet/SG<br>
+									<br>
+									05.07.2017<br>
+									Ackerbau: Industriekartoffeln<br>
+									Bewirtschaftung: Konventionell<br>
+									Bodentyp: Moor, tieftorfig<br>
+									<br>
+									Beobachtungen: Wenig bis keine Aktivität der Bodenfauna<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player1">
+
+									<audio id="player1" class="audioplayer">
+										<source src="audio/oberriet.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time1" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime1" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime1" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar1">
+											<div class="progress" id="progress1"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Moerschwil 2 -->
+						<div id="2" class="one" onclick="twoClick(event, this, id);" style="left: 67.8%; top: 17.2%;">
+
+							<div class="dropdown" id="dd2">
+								<p class="text" id="text">
+									Mörschwil/SG<br>
+									<br>
+									15.06.2017<br>
+									Grasland<br>
+									Bewirtschaftung: Intensiv<br>
+									Bodentyp: Pseudogley, schwach sauer<br>
+									<br>
+									Beobachtungen: Vibrationen Heuschrecken<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player2">
+
+									<audio id="player2" name="audio">
+										<source src="audio/moerschwil.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time2" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime2" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime2" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar2">
+											<div class="progress" id="progress2"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Schleitheim 3 -->
+						<div id="3" class="one" onclick="twoClick(event, this, id);" style="left: 52.8%; top: 4.6%;">
+
+							<div class="dropdown" id="dd3">
+								<p class="text" id="text">
+									Schleitheim/SH<br>
+									<br>
+									22.06.2017<br>
+									Ackerbau: Zwischenfrucht – Kunstwiese<br>
+									Bewirtschaftung: Konventionell<br>
+									Bodentyp: Kalkbraunerde, extrem tonig<br>
+
+									Beobachtungen: Sehr heiss und trocken, Fluglärm<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player3">
+
+									<audio id="player3" name="audio">
+										<source src="audio/schleitheim.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time3" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime3" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime3" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar3">
+											<div class="progress" id="progress3"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Irchel 4 -->
+						<div id="4" class="one" onclick="twoClick(event, this, id);" style="left: 54.6%; top: 15.2%;">
+
+							<div class="dropdown" id="dd4">
+								<p class="text" id="text">
+									Irchel/ZH<br>
+									<br>
+									21.06.2017<br>
+									Buchenwald<br>
+									Humusform: Moder<br>
+									Bodentyp: Parabraunerde<br>
+									<br>
+									Beobachtungen: Hohe Aktivität, beginnendes Gewitter<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player4">
+
+									<audio id="player4" name="audio">
+										<source src="audio/irchel.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time4" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime4" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime4" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar4">
+											<div class="progress" id="progress4"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Möhlin 5 -->
+						<div id="5" class="one" onclick="twoClick(event, this, id);" style="left: 42.4%; top: 14.2%;">
+
+							<div class="dropdown" id="dd5">
+								<p class="text" id="text">
+									Möhlin/AG<br>
+									<br>
+									14.06.2017<br>
+									Ackerbau: Zuckerrüben<br>
+									Bewirtschaftung: Konventionell<br>
+									Bodentyp: Parabraunerde, sauer<br>
+									<br>
+									Beobachtungen: Leichter Wind, wenig bis keine Aktivität, Boden sehr trocken<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player5">
+
+									<audio id="player5" name="audio">
+										<source src="audio/moehlin.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time5" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime5" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime5" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar5">
+											<div class="progress" id="progress5"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Bettlachstock 6 -->
+						<div id="6" class="one" onclick="twoClick(event, this, id);" style="left: 34.9%; top: 28%;">
+
+							<div class="dropdown" id="dd6">
+								<p class="text" id="text">
+									Bettlachstock/SO<br>
+									<br>
+									18.05.2017<br>
+									Buchenwald<br>
+									Humusform: Mull<br>
+									Bodentyp: Rendzina<br>
+									<br>
+									Beobachtungen: Wenig Aktivität, kühl<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player6">
+
+									<audio id="player6" name="audio">
+										<source src="audio/bettlachstock.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time6" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime6" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime6" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar6">
+											<div class="progress" id="progress6"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Gais 7 -->
+						<div id="7" class="one" onclick="twoClick(event, this, id);" style="left: 67.9%; top: 20.9%;">
+
+							<div class="dropdown" id="dd7">
+								<p class="text" id="text">
+									Gais/AR<br>
+									<br>
+									05.07.2017<br>
+									Grasland<br>
+									Bewirtschaftung: Extensiv/Bio<br>
+									Bodentyp: Braunerde-Gley<br>
+									<br>
+									Beobachtungen: Hohe Aktivität<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player7">
+
+									<audio id="player7" name="audio">
+										<source src="audio/gais.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time7" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime7" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime7" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar7">
+											<div class="progress" id="progress7"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Zürich 8 -->
+						<div id="8" class="one" onclick="twoClick(event, this, id);" style="left: 52.6%; top: 20.2%;">
+
+							<div class="dropdown" id="dd8">
+								<p class="text" id="text">
+									Zürich/ZH<br>
+									<br>
+									13.07.2018<br>
+									Dachterrasse Toni-Areal<br>
+									Dachgarten mit Waldföhren<br>
+									Künstliches Substrat: Blähton, Lava, Torf<br>
+									<br>
+									Beobachtungen: Recht hohe Aktivität<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player8">
+
+									<audio id="player8" name="audio">
+										<source src="audio/zuerich.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time8" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime8" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime8" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar8">
+											<div class="progress" id="progress8"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Othmarsingen 9 -->
+						<div id="9" class="one" onclick="twoClick(event, this, id);" style="left: 48.2%; top: 19.7%;">
+
+							<div class="dropdown" id="dd9">
+								<p class="text" id="text">
+									Othmarsingen/AG<br>
+									<br>
+									19.07.2017<br>
+									Buchenwald<br>
+									Humusform: Mull<br>
+									Bodentyp: Parabraunerde<br>
+									<br>
+									Beobachtungen: Hohe Aktivität, Fluglärm<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player9">
+
+									<audio id="player9" name="audio">
+										<source src="audio/othmarsingen.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time9" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime9" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime9" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar9">
+											<div class="progress" id="progress9"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Schänis 10 -->
+						<div id="10" class="one" onclick="twoClick(event, this, id);" style="left: 62%; top: 30.4%;">
+
+							<div class="dropdown" id="dd10">
+								<p class="text" id="text">
+									Schänis<br>
+									<br>
+									21.06.2017<br>
+									Buchenwald<br>
+									Humusform: Mull<br>
+									Bodentyp: Braunerde<br>
+									<br>
+									Beobachtungen: Mässig Aktivität<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player10">
+
+									<audio id="player10" name="audio">
+										<source src="audio/schaenis.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time10" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime10" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime10" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar10">
+											<div class="progress" id="progress10"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Biberbrugg 11 -->
+						<div id="11" class="one" onclick="twoClick(event, this, id);" style="left: 55.9%; top: 31.9%;">
+
+							<div class="dropdown" id="dd11">
+								<p class="text" id="text">
+									Biberbrugg/SZ<br>
+									<br>
+									24.05.2017<br>
+									Buchenmischwald<br>
+									Humusform: Moder<br>
+									Bodentyp: Braunerde, schwach pseudovergleyt<br>
+									<br>
+									Beobachtungen: Wenig Aktivität, kühl, Fluglärm<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player11">
+
+									<audio id="player11" name="audio">
+										<source src="audio/biberbrugg.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time11" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime11" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime11" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar11">
+											<div class="progress" id="progress11"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Mayens de My 12 -->
+						<div id="12" class="one" onclick="twoClick(event, this, id);" style="left: 32.2%; top: 72%;">
+
+							<div class="dropdown" id="dd12">
+								<p class="text" id="text">
+									Mayens de My/VS<br>
+									<br>
+									12.08.2016<br>
+									Grasland<br>
+									Bewirtschaftung: Extensiv, bestossen<br>
+									Bodentyp: Podsol<br>
+									<br>
+									Beobachtungen: Höchste aufgezeichnete Aktivität<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player12">
+
+									<audio id="player12" name="audio">
+										<source src="audio/mayens.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time12" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime12" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime12" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar12">
+											<div class="progress" id="progress12"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Vordemwald 13 -->
+						<div id="13" class="one" onclick="twoClick(event, this, id);" style="left: 42.7%; top: 25.5%;">
+
+							<div class="dropdown" id="dd13">
+								<p class="text" id="text">
+									Vordemwald/AG<br>
+									<br>
+									18.05.2017<br>
+									Tannen-Fichtenwald<br>
+									Humusform: Moder<br>
+									Bodentyp: Pseudogley<br>
+									<br>
+									Beobachtungen: Kommunizierende Insekten im Boden, Fluglärm<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player13">
+
+									<audio id="player13" name="audio">
+										<source src="audio/vordemwald.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time13" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime13" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime13" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar13">
+											<div class="progress" id="progress13"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Ebikon 14 -->
+						<div id="14" class="one" onclick="twoClick(event, this, id);" style="left: 50.5%; top: 35.5%;">
+
+							<div class="dropdown" id="dd14">
+								<p class="text" id="text">
+									Ebikon/LU<br>
+									<br>
+									14.06.2017<br>
+									Grasland<br>
+									Bewirtschaftung: Intensiv<br>
+									Bodentyp: Braunerde, schwach sauer<br>
+									<br>
+									Beobachtungen: Höchste aufgezeichnete Aktivität<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player14">
+
+									<audio id="player14" name="audio">
+										<source src="audio/ebikon.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time14" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime14" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime14" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar14">
+											<div class="progress" id="progress14"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Guberwald 15 -->
+						<div id="15" class="one" onclick="twoClick(event, this, id);" style="left: 47.6%; top: 38.2%;">
+
+							<div class="dropdown" id="dd15">
+								<p class="text" id="text">
+									Guberwald/LU<br>
+									<br>
+									18.07.2017<br>
+									Weisstannen-/Fichtenwald<br>
+									Humusform: Rohhumus<br>
+									Bodentyp: Eisen-Humuspodsol<br>
+									<br>
+									Beobachtungen: Beginnendes Gewitter, einsetzender Regen<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player15">
+
+									<audio id="player15" name="audio">
+										<source src="audio/guberwald.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time15" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime15" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime15" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar15">
+											<div class="progress" id="progress15"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Trub 16 -->
+						<div id="16" class="one" onclick="twoClick(event, this, id);" style="left: 42.6%; top: 40.5%;">
+
+							<div class="dropdown" id="dd16">
+								<p class="text" id="text">
+									Trub/BE<br>
+									<br>
+									18.07.2017<br>
+									Grasland<br>
+									Bewirtschaftung: Wenig intensiv<br>
+									Bodentyp: Saure Braunerde<br>
+									<br>
+									Beobachtungen: Hohe Aktivität, wenig Umweltlärm<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player16">
+
+									<audio id="player16" name="audio">
+										<source src="audio/trub.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time16" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime16" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime16" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar16">
+											<div class="progress" id="progress16"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Grindelwald 17 -->
+						<div id="17" class="one" onclick="twoClick(event, this, id);" style="left: 43.6%; top: 57%;">
+
+							<div class="dropdown" id="dd17">
+								<p class="text" id="text">
+									Grindelwald/BE<br>
+									<br>
+									12.07.2017<br>
+									Grasland<br>
+									Bewirtschaftung: Extensiv, bestossen<br>
+									Bodentyp: Braunpodsol, schwach pseudogleyig<br>
+									Beobachtungen: Hohe Aktivität, Kuhweide in der Nähe
+									<br>
+									Beobachtungen: Leichter Wind<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player17">
+
+									<audio id="player17" name="audio">
+										<source src="audio/grindelwald.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time17" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime17" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime17" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar17">
+											<div class="progress" id="progress17"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Beatenberg 18 -->
+						<div id="18" class="one" onclick="twoClick(event, this, id);" style="left: 40.4%; top: 53.1%;">
+
+							<div class="dropdown" id="dd18">
+								<p class="text" id="text">
+									Beatenberg/BE<br>
+									<br>
+									28.06.2017<br>
+									Fichtenwald<br>
+									Humusform: Rohhumus<br>
+									Bodentyp: Podsol, pseudovergyeit<br>
+									<br>
+									Beobachtungen: Wenig Aktivität, Fluglärm<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player18">
+
+									<audio id="player18" name="audio">
+										<source src="audio/beatenberg.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time18" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime18" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime18" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar18">
+											<div class="progress" id="progress18"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Ins 19 -->
+						<div id="19" class="one" onclick="twoClick(event, this, id);" style="left: 35.9%; top: 41%;">
+
+							<div class="dropdown" id="dd19">
+								<p class="text" id="text">
+									Ins/BE<br>
+									<br>
+									12.07.2017<br>
+									Ackerbau: Zwischenfrucht Kleewiese<br>
+									Bewirtschaftung: Konventionell<br>
+									Bodentyp: Halbmoor, grundnass<br>
+									<br>
+									Beobachtungen: Starker Wind<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player19">
+
+									<audio id="player19" name="audio">
+										<source src="audio/ins.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time19" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime19" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime19" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar19">
+											<div class="progress" id="progress19"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Ependes 21 -->
+						<div id="21" class="one" onclick="twoClick(event, this, id);" style="left: 30.1%; top: 50.5%;">
+
+							<div class="dropdown" id="dd21">
+								<p class="text" id="text">
+									Ependes/FR<br>
+									<br>
+									12.07.2017<br>
+									Grasland<br>
+									Bewirtschaftung: Wenig intensiv<br>
+									Bodentyp: Braunerde, diffus<br>
+									<br>
+									Beobachtungen: Starker Wind/Rauschen des nahen Waldes im Hintergrund<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player21">
+
+									<audio id="player21" name="audio">
+										<source src="audio/ependes.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time21" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime21" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime21" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar21">
+											<div class="progress" id="progress21"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Attalens/FR 22 -->
+						<div id="22" class="one" onclick="twoClick(event, this, id);" style="left: 25.3%; top: 62.2%;">
+
+							<div class="dropdown" id="dd22">
+								<p class="text" id="text">
+									Attalens/FR<br>
+									<br>
+									06.07.2017<br>
+									Grasland<br>
+									Bewirtschaftung: Intensiv<br>
+									Bodentyp: Braunerde, schwach sauer<br>
+									<br>
+									Beobachtungen: Keine<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player22">
+
+									<audio id="player22" name="audio">
+										<source src="audio/attalens.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time22" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime22" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime22" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar22">
+											<div class="progress" id="progress22"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Etoy 23 -->
+						<div id="23" class="one" onclick="twoClick(event, this, id);" style="left: 18.2%; top: 62.7%;">
+
+							<div class="dropdown" id="dd23">
+								<p class="text" id="text">
+									Etoy/VD<br>
+									<br>
+									06.07.2017<br>
+									Ackerbau: Weizen<br>
+									Bewirtschaftung: Konventionell<br>
+									Bodentyp: Braunerde, schwach sauer<br>
+									<br>
+									Beobachtungen: Leichter Wind, Aufnahme abgebrochen auf Verlangen des Bauers<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player23">
+
+									<audio id="player23" name="audio">
+										<source src="audio/etoy.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time23" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime23" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime23" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar23">
+											<div class="progress" id="progress23"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- CS Affoltern 24 -->
+						<div id="24" class="two" onclick="twoClick(event, this, id);" style="left: 53%; top: 18%;">
+
+							<div class="dropdown" id="dd24">
+								<p class="text" id="text">
+									Zürich-Affoltern/ZH – Citizen Science<br>
+									<br>
+									11.9.2018, 14:25<br>
+									Ackerbau: Gründüngung (Mischung aus Senf und Gras)<br>
+									Bewirtschaftung: konventionell<br>
+									Bodentyp: Braunerde<br>
+									<br>
+									Beobachtung: Baustelle in der Nähe, gelegentlich Flugzeuge<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player24">
+
+									<audio id="player24" name="audio">
+										<source src="audio/affoltern.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time24" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime24" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime24" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar24">
+											<div class="progress" id="progress24"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- CS Meilen 25 -->
+						<div id="25" class="two" onclick="twoClick(event, this, id);" style="left: 54.8%; top: 27.7%;">
+
+							<div class="dropdown" id="dd25">
+								<p class="text" id="text">
+									Meilen/ZH – Citizen Science<br>
+									<br>
+									22.07.2018, 18:15<br>
+									Ackerbau: Weizen<br>
+									Bewirtschaftung: konventionell<br>
+									Bodentyp: Braunerde<br>
+									<br>
+									Beobachtungen: Stoppelfeld, Ernte war am 9.7.18<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player25">
+
+									<audio id="player25" name="audio">
+										<source src="audio/meilen.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time25" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime25" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime25" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar25">
+											<div class="progress" id="progress25"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- CS Paspels 26 -->
+						<div id="26" class="two" onclick="twoClick(event, this, id);" style="left: 68.5%; top: 55.7%;">
+
+							<div class="dropdown" id="dd26">
+								<p class="text" id="text">
+									Paspels/GR – Citizen Science<br>
+									<br>
+									24.07.2018, 20:30<br>
+									Dauerwiese<br>
+									Bewirtschaftung: Demeter<br>
+									Bodentyp: Fluvisol/Kalkbraunerde <br>
+									<br>
+									Beobachtung: keine<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player26">
+
+									<audio id="player26" name="audio">
+										<source src="audio/paspels.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time26" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime26" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime26" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar26">
+											<div class="progress" id="progress26"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- CS Braggio 27 -->
+						<div id="27" class="two" onclick="twoClick(event, this, id);" style="left: 62.5%; top: 77.7%;">
+
+							<div class="dropdown" id="dd27">
+								<p class="text" id="text">
+									Braggio/GR – Citizen Science<br>
+									<br>
+									05.08.2018<br>
+									Grasland<br>
+									Bewirtschaftung: Extensiv, Bio<br>
+									Bodentyp: Podsol<br>
+									<br>
+									Beobachtungen: Kommunikationslaute verschiedene Bodentiere<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player27">
+
+									<audio id="player27" name="audio">
+										<source src="audio/braggio.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time27" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime27" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime27" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar27">
+											<div class="progress" id="progress27"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- CS Duggingen 28 -->
+						<div id="28" class="two" onclick="twoClick(event, this, id);" style="left: 38.8%; top: 15.3%;">
+
+							<div class="dropdown" id="dd28">
+								<p class="text" id="text">
+									Duggingen/BL – Citizen Science<br>
+									<br>
+									14.08.2018, 7:10<br>
+									Dauerwiese, Magerstandort <br>
+									Bewirtschaftung: Biologisch<br>
+									Bodentyp: Kalkbraunerde<br>
+									<br>
+									Beobachtungen: Nähe Autobahn<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player28">
+
+									<audio id="player28" name="audio">
+										<source src="audio/duggingen.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time28" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime28" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime28" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar28">
+											<div class="progress" id="progress28"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- CS Chevenez 29 -->
+						<div id="29" class="two" onclick="twoClick(event, this, id);" style="left: 29%; top: 22.7%;">
+
+							<div class="dropdown" id="dd29">
+								<p class="text" id="text">
+									Chevenez/JU – Citizen Science<br>
+									<br>
+									26.08.2018, 15.42<br>
+									Ackerbau: Dauerwiese<br>
+									Bewirtschaftung: konventionell<br>
+									Bodentyp: Kalkbraunerde<br>
+									<br>
+									Beobachtung: Keine<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player29">
+
+									<audio id="player29" name="audio">
+										<source src="audio/chevenez.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time29" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime29" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime29" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar29">
+											<div class="progress" id="progress29"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- CS Koppigen 30 -->
+						<div id="30" class="two" onclick="twoClick(event, this, id);" style="left: 38.8%; top: 35.7%;">
+
+							<div class="dropdown" id="dd30">
+								<p class="text" id="text">
+									Koppigen/BE – Citizen Science<br>
+									<br>
+									08.08.2018, 16:00<br>
+									Ackerbau: Kartoffeln<br>
+									Bewirtschaftung: konventionell<br>
+									Bodentyp: Braunerde<br>
+									<br>
+									Beobachtungen: Flugzeug fliegt darüber<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player30">
+
+									<audio id="player30" name="audio">
+										<source src="audio/koppigen.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time30" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime30" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime30" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar30">
+											<div class="progress" id="progress30"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- CS Zuzwil 31 -->
+						<div id="31" class="two" onclick="twoClick(event, this, id);" style="left: 36.3%; top: 38.5%;">
+
+							<div class="dropdown" id="dd31">
+								<p class="text" id="text">
+									Zuzwil/BE – Citizen Science<br>
+									<br>
+									02.08.2018, 21:54<br>
+									Ackerbau: Kartoffeln<br>
+									Bewirtschaftung: konventionell<br>
+									Bodentyp: Braunerde<br>
+									<br>
+									Beobachtungen: Flugzeug fliegt darüber<br>
+									<br>
+								</p>
+
+								<div class="player" id="audio-player31">
+
+									<audio id="player31" name="audio">
+										<source src="audio/zuzwil.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time31" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime31" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime31" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar31">
+											<div class="progress" id="progress31"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+						<!-- Bern 32 -->
+						<div id="32" class="one" onclick="twoClick(event, this, id);" style="left: 35.2%; top: 44%;">
+
+							<div class="dropdown" id="dd32">
+								<p class="text" id="text">
+									Bern/BE<br>
+									<br>
+									15.06.2018<br>
+									Zentrum Paul Klee,<br>
+									Grasland<br>
+									Bewirtschaftung: Extensiv, Bio<br>
+									Bodentyp: Aufgeschüttetes Substrat<br>
+									<br>
+									Beobachtungen: Hohe Aktivität, Verkehrslärm<br>
+								</p>
+
+								<div class="player" id="audio-player32">
+
+									<audio id="player32" name="audio">
+										<source src="audio/bern.wav" type="audio/mpeg" />
+									</audio>
+
+									<div id="audiosettings">
+										<div class="time" id="time32" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime32" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime32" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar32">
+											<div class="progress" id="progress32"></div>
+										</div>
+									</div>
+
+								</div>
+
+							</div>
+
+						</div>
+
+					</div>
+
+				</div>
+
+			</div> <!-- end of tab-bodenmap -->
+
+
+			<div id="tab-muensingen" class="tab-content">
+
+				<div class="soundmap" id="soundmap-muensingen">
+					<img src="image/muensingen.png" id="map-muensingen">
+
+					<div id="overlay-muensingen" class="img" onclick="oneClick(event, this);">
+
+
+
+						<div id="101" class="one point-muensingen" onclick="twoClick(event, this, id);"
+							style="top: 53.2%; left: 37%;">
+							<div class="dropdown" id="dd101">
+								<img src="image/image1.jpeg" class="imgMuensingen"></img>
+								<p class="text" id="text">
+									<br>
+									KOMPOSTMIETE<br>
+									<br>
+									Die Kompostmiete der Bioschwand wurde im Herbst 2018 aus Schnitt-<br>gut, Laub und
+									Küchenabfällen angesetzt und 1 Woche vor den Aufnahmen umgesetzt. Die Wärme durch
+									die hohe Aktivität der Kompostbewohner war während der Aufnahme auch noch auf der
+									Oberfläche spürbar.
+									<br>
+								</p>
+								<div class="playerMuensingen" id="audio-player101">
+									<audio id="player101" class="audioplayer">
+										<source src="audio/muensingen1.wav" type="audio/mpeg" />
+									</audio>
+									<div id="audiosettings">
+										<div class="time" id="time101" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime101" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime101" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar101">
+											<div class="progress" id="progress101"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div id="102" class="one point-muensingen" onclick="twoClick(event, this, id);"
+							style="top: 59.2%; left: 41.6%;">
+							<div class="dropdown" id="dd102">
+								<img src="image/image2.jpeg" class="imgMuensingen"></img>
+
+								<p class="text" id="text">
+									<br>
+									WILDBLUMENWIESE<br>
+									<br>
+									Diese bunte Wiese liegt südseitig vor dem Hauptgebäude der Bioschwand. Der Boden ist
+									nährstoffarm. Neben vielen verschiedenen Pflanzenarten leben hier auch bodenbrütende
+									Wildbienen.
+									<br>
+								</p>
+								<div class="playerMuensingen" id="audio-player102">
+									<audio id="player102" class="audioplayer">
+										<source src="audio/muensingen2.wav" type="audio/mpeg" />
+									</audio>
+									<div id="audiosettings">
+										<div class="time" id="time102" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime102" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime102" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar102">
+											<div class="progress" id="progress102"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div id="103" class="one point-muensingen" onclick="twoClick(event, this, id);"
+							style="top: 78.8%; left: 43.6%;">
+							<div class="dropdown" id="dd103">
+								<img src="image/image3.jpeg" class="imgMuensingen"></img>
+								<p class="text" id="text">
+									<br>
+									KUNSTWIESE<br>
+									<br>
+									Diese Kunstwiese wurde im August 2018 auf dem Hogeracker von Sigis Biohof angesät.
+									Während der Aufnahme dominierten Raigräser, Kleearten und das Hirtentäschelkraut.
+									Der Boden des „Hogerackers“ ist eine Parabraunerde.
+									<br>
+								</p>
+								<div class="playerMuensingen" id="audio-player103">
+									<audio id="player103" class="audioplayer">
+										<source src="audio/muensingen3.wav" type="audio/mpeg" />
+									</audio>
+									<div id="audiosettings">
+										<div class="time" id="time103" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime103" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime103" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar103">
+											<div class="progress" id="progress103"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div id="104" class="one point-muensingen" onclick="twoClick(event, this, id);"
+							style="top: 65.3%; left: 44.1%;">
+							<div class="dropdown" id="dd104">
+								<img src="image/image4.jpeg" class="imgMuensingen"></img>
+								<p class="text" id="text">
+									<br>
+									RAPS
+									<br>
+									<br>
+									Der Raps auf der „Hausmatte“ von Sigis Biohof stand zum Zeitpunkt der Aufnahme kurz
+									vor der Blüte. Er gedeiht auf einer Parabraunerde.
+									<br>
+								</p>
+								<div class="playerMuensingen" id="audio-player104">
+									<audio id="player104" class="audioplayer">
+										<source src="audio/muensingen4.wav" type="audio/mpeg" />
+									</audio>
+									<div id="audiosettings">
+										<div class="time" id="time104" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime104" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime104" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar104">
+											<div class="progress" id="progress104"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div id="105" class="one point-muensingen" onclick="twoClick(event, this, id);"
+							style="top: 51.5%; left: 52.4%;">
+							<div class="dropdown" id="dd105">
+								<img src="image/image5.jpeg" class="imgMuensingen"></img>
+								<p class="text" id="text">
+									<br>
+									WALD<br>
+									<br>
+									Die Aufnahmen entstanden in einem Buchenmischwald beim Eingang zum Vitaparcours im
+									Schwandwald. Mehr oder weniger stark abgebaute Streu vom Herbst sowie
+									Buschwindröschen bedeckten den Boden.
+									<br>
+								</p>
+								<div class="playerMuensingen" id="audio-player105">
+									<audio id="player105" class="audioplayer">
+										<source src="audio/muensingen5.wav" type="audio/mpeg" />
+									</audio>
+									<div id="audiosettings">
+										<div class="time" id="time105" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime105" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime105" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar105">
+											<div class="progress" id="progress105"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+						<div id="106" class="one point-muensingen" onclick="twoClick(event, this, id);"
+							style="top: 12.8%; left: 76.1%;">
+							<div class="dropdown" id="dd106">
+								<img src="image/image6.jpeg" class="imgMuensingen"></img>
+								<p class="text" id="text">
+									<br>
+									NATURWIESE<br>
+									<br>
+									Diese Naturwiese von Sigis Biohof am nordöstlichen Rand des Schwandwaldes wächst auf
+									einem organischen Boden eines ehemaligen Moores. Dieser schwarze Boden mineralisiert
+									viele Nährstoffe und ist deshalb sehr fruchtbar. <br>
+								</p>
+								<div class="playerMuensingen" id="audio-player106">
+									<audio id="player106" class="audioplayer">
+										<source src="audio/muensingen6.wav" type="audio/mpeg" />
+									</audio>
+									<div id="audiosettings">
+										<div class="time" id="time106" style="top: 0px; left: 15px;">00:00</div>
+										<div class="time" id="ctime106" style="top: 0px; left: 90px;">00:00</div>
+										<div class="time" id="ftime106" style="top: 0px; left: 165px;">00:00</div>
+										<div class="progressbar" id="progressbar106">
+											<div class="progress" id="progress106"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+
+
+
+
+
+					</div>
+
+				</div>
+
+			</div> <!-- end of tab-muensingen -->
+
+
+			<div id="tab-bodenhoeren" class="tab-content">
+
+				<div class="ucol"></div>
+				<div class="column1" id="col1">
+					<img src="image/bild1.jpg" id="colbild1">
+					<p class="collegende">
+						<br>Was geschieht unter der Oberfläche?<br><br>
+					</p>
+					<p class="coltext">
+						<b>Böden und ihre Wahrnehmung</b><br><br>
+						Der Boden zeigt sich uns meist nur als Oberfläche: Was darunter liegt, bleibt uns verborgen.
+						Doch Böden sind komplexe Ökosysteme mit eng verwobenen Interaktionen. Natürliche
+						Böden reagieren auf jegliche Störungen sehr sensibel. Sei dies eine intensive land- oder
+						forstwirtschaftliche Nutzung oder das Befahren mit schweren Maschinen. Gesunden Böden
+						kommt eine Schlüsselfunktion zu, weil sie unverzichtbare Leistungen erbringen:
+						Bodenökosysteme filtern und regulieren Wasser, bieten Lebensraum für unzählige
+						Bodenorganismen und sind zudem in der Lage, toxische Stoffe abzubauen. Nachhaltig
+						bewirtschaftete Böden haben eine höhere Widerstandskraft, können sich besser an neue
+						klimatische Bedingungen anpassen und helfen Treibhausgase zu reduzieren.<br><br>
+
+						Demgegenüber hat der Verlust von gesunden Böden in den letzten Jahrzehnten dramatisch
+						zugenommen. Nicht nur in den Tropen, wo ganze Landstriche durch Entwaldung und Erosion
+						verschwinden, sondern auch vor unserer Haustüre. Die Böden, auf denen unsere Lebensmittel
+						wachsen, verlieren durch den Einsatz von Mineraldüngern und chemischen
+						Pflanzenschutzmitteln und durch die Bodenverdichtung ihre Fruchtbarkeit.<br><br>
+
+						Diesem Prozess scheint ein grundlegendes Wahrnehmungsproblem zugrunde zu liegen: Die
+						Funktionen und den Gesundheitszustand des Bodens können wir nicht sehen. Der Boden ist
+						eine Art Black Box, die von Spezialisten geöffnet und interpretiert werden muss. Deren
+						Erkenntnisse müssen dann in einem zweiten Schritt den „Nichtexperten“ vermittelt werden.
+						Zudem nehmen wir den Boden zu unseren Füssen nicht bewusst war – er ist einfach da und
+						wird oft als lebloses Material gesehen und auch so behandelt. Eines der wichtigsten Ziele
+						unseres Projekts Sounding Soil ist es, die Prozesse und das Leben im Boden sinnlich
+						erfahrbar zu machen und damit das öffentliche Bewusstsein für gesunde Böden zu stärken.<br><br>
+
+						In jüngeren Forschungsgebieten wie der Ökoakustik, der akustischen Landschaftsökologie
+						und der Akustischen Ökologie werden Tonaufnahmen verwendet, um Beziehungen und
+						Zusammenhänge in der Umwelt zu untersuchen. Praktisch jeder Organismus produziert
+						Schallwellen, zum Beispiel durch seine Bewegungen oder durch Kommunikation. Wir
+						können also hören, was ein Organismus tut. Diese Geräusche können benützt werden, um
+						ökologische Beziehungen und Prozesse zu untersuchen. Wir können zwar nicht in den Boden
+						hineinsehen, aber wir können hineinhören.
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col2">
+					<p class="coltext">
+						<b>Was hört man im Boden?</b><br><br>
+
+						In einem gesunden Boden lebt eine vielfältige Fauna und Flora. Sie garantiert die
+						grundlegenden Bodenfunktionen wie die Zersetzung des Streumaterials und
+						Nährstoffkreisläufe. Je vielfältiger die Lebewesen im Boden sind, umso höher ist die
+						Redundanz des Ökosystems, d. h. beim Ausfall einzelner Arten können andere deren
+						Funktionen im Boden übernehmen. Die Bodentiere sind unterschiedlich gross – von Bakterien
+						und Nematoden (Fadenwürmer), der so genannten Mikrofauna, bis hin zur Makro- und
+						Megafauna wie Käfern, Regenwürmern oder Maulwürfen spannt sich ein komplexes
+						Netzwerk von Interaktionen und Ernährungsabhängigkeiten. Mit unserer akustischen
+						Ausrüstung hören wir vorwiegend die Bodentiere der Meso- und Makrofauna, also alle Tiere,
+						die grösser als einen halben Millimeter sind. Der Meso- und Makrofauna kommen wichtige
+						Funktionen im Boden zu – diese Tiergruppe zerkleinert Pflanzenreste, macht Jagd auf andere
+						Bodentiere und lockert durch Graben das Erdreich; eine grosse Vielfalt in der Meso- und
+						Makrofauna zeigt ein gesundes Bodenökosystem an. <br><br>
+
+						In den Aufnahmen in dieser Soundmap sind Bodentiere wie Springschwänze, Milben,
+						Hunderfüsser, Käfer, Asseln, Fliegenlarven, Regenwürmer, Spinnen, Heuschrecken und
+						Zikaden zu hören. Wir haben an allen Aufnahmeorten des Forschungsprojekts (grosse Punkte)
+						jeweils eine Bodenprobe entnommen und die Tierarten bestimmt und gezählt. Die meisten
+						Bodentiere machen Geräusche, wenn sie sich durch den Boden bewegen oder fressen. Einige
+						nutzen den Boden aber auch, um miteinander zu kommunizieren. Ein Teil der Tiere lebt in
+						der Streuschicht - das ist das sich zersetzende Pflanzenmaterial auf der Bodenoberfläche.
+						Zudem sind auch Tiere zu hören, die auf dem Boden leben und diesen als
+						Kommunikationsmedium benutzen, indem sie Vibrationen erzeugen, die Artgenossen über
+						die Beine oder den Körper wahrnehmen können.<br><br>
+
+						Entsprechend ihrer Körpergrösse, ihrem Körperbau und ihrer Verhaltensweise produzieren
+						die Bodentiere unterschiedliche Geräusche: Je verschiedener die Tiergeräusche in einer
+						Aufnahme sind, umso vielfältiger ist die Bodenfauna. Das lässt sich auch akustisch messen
+						und statistisch auswerten. Im Forschungsprojekt Sounding Soil versuchen wir anhand so
+						genannter Akustischer Indices die Artenvielfalt im Boden akustisch zu messen. Dabei haben
+						wir an den verschiedenen Standorten dieser Soundmap bereits sehr deutliche Unterschiede
+						feststellen können. Konventionell bewirtschaftetes Ackerland zum Beispiel ist stiller und
+						weist weniger verschiedene Geräusche auf als eine biologisch bewirtschaftete Wiese. Auch
+						im Waldboden ist es etwas stiller, weil dieser in der Regel kühler ist und die Bodentiere
+						weniger aktiv sind als in einer sonnenbeschienenen Wiese.<br><br>
+					</p>
+					<img src="image/bild2.jpg" id="colbild2">
+					<p class="collegende">
+						<br>Mobiles Aufnahmeequipment
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col3">
+					<p class="coltext"><br>
+						Oft sind nicht nur Geräusche der Bodenfauna zu hören, sondern auch physikalische Quellen
+						wie Regen, der auf den Boden aufschlägt und versickert oder Wind, der die Vegetation auf
+						der Oberfläche bewegt und als Gerumpel im Boden hörbar ist. Zudem hört man im Boden
+						auch anderen Umweltlärm. So beeinträchtigen die Vibrationen von Baustellen und die Nähe
+						von Strassen akustische Aufnahmen und Messungen im Boden – ganz besonders auch
+						Fluglärm, dessen tiefes Donnern die Geräusche der Bodenlebewesen übertönen kann. Die
+						Auswirkungen akustischer Umweltverschmutzung auf die Ausbreitung, Aktivität und
+						Zusammensetzung der Bodenfauna sind gänzlich unerforscht; es muss jedoch angenommen
+						werden, dass vom Menschen produzierter Umweltlärm nicht nur die oberirdische oder
+						maritime Fauna beeinträchtigt, sondern auch die Tiergemeinschaften im Boden.<br><br>
+
+						Ein weiteres Element der Sounding Soil Klanginstallation ist die Musik, die zu spielen
+						beginnt, wenn in der Soundmap keine Bodengeräusche zum Anhören ausgewählt sind. Sie
+						besteht aus vier Klangmustern, die sich auf drei Ebenen der Lautsprecheranlage im Container
+						verteilen. Die Lautstärke der einzelnen Klangmuster wird von Sensoren im Boden auf dem Dach
+						des Containers gesteuert. Werte wie die Sonneneinstrahlung, die Oberflächen- und Bodentemperatur
+						sowie die Bodenfeuchtigkeit steuern die Musik und machen gleichzeitig die mikroklimatischen
+						Faktoren und ihre gegenseitigen Wechselwirkungen, die einen Einfluss auf die Aktivität der
+						Bodenfauna haben, hör- und erlebbar. Je nach Tageszeit, Wetter und Saison entsteht so ein sich
+						immer wieder änderndes, generatives Musikstück. <br><br>
+					</p>
+					<p class="coltext">
+						<br><br><b>Das Forschungsprojekt Sounding Soil</b><br><br>
+
+						Sounding Soil ist ein inter- und transdisziplinäres Forschungs- und Kunstprojekt, in dem die
+						Akustik von Bodenökosystemen untersucht wird. In Sounding Soil werden Aufnahme- und
+						Messmethoden entwickelt, um die akustische Aktivität und die Zusammensetzung von
+						Lebewesen im Boden zu untersuchen. Aufnahmen von Böden sind Teil einer
+						Kunstinstallation und eines Citizen Science-Projekts; dadurch wollen wir den Lebensraum
+						Boden unmittelbar erfahrbar machen.
+						<br><br>
+
+						Sounding Soil ist ein Kooperationsprojekt der Zürcher Hochschule der Künste ZHdK
+						(Institute for Computer Music and Sound Technology), der Eidg. Forschungsanstalt für Wald,
+						Schnee und Landschaft WSL, der Nationalen Bodenbeobachtung NABO an der Agroscope,
+						dem Institut für Terrestrische Ökosysteme und dem Transdisziplinären Labor der
+						Umweltsystemwissenschaften an der ETH Zürich und der Stiftung Biovision.
+						<br><br><br>
+
+						<b>Projektteam:</b>
+						<br><br>
+						Martin Gossner (WSL – Waldentomologie)<br>
+						Martin Grossenbacher (Biovision – Öffentlichkeitsarbeit)<br>
+						Ken Gubler (ICST - Softwareentwicklung)<br>
+						Xianda Guo (Masterstudentin ETHZ, Analyse Ökologie- und Audiodaten)<br>
+						Sabine Lerch (Biovision – Projektkoordination)<br>
+						Marcus Maeder (ICST – Projektleitung, Ökoakustik, künstlerische Forschung)<br>
+						Michael Müller (NABO/Agroscope – Modelling & Monitoring)<br>
+						Martin Neukom (ICST – Implementation akustische Indices)<br>
+						Marcus Schaub (WSL – Leiter Forschungssite Pfynwald)<br>
+						Doris Schneider Mathys (WSL – Entomologisches Labor)<br>
+						Sébastien Schiesser (ICST – Entwicklung Aufnahmegeräte)<br>
+						Annalena Tinner (Masterstudentin ETHZ - Citizen Science Projekt)<br>
+						Marco Walser (WSL – Feldmessungen, LWF Messstationen)<br>
+						<br>
+
+						<br><b>Wissenschaftliche Supervision:</b>
+						<br><br>
+						Armin Keller (NABO/Agroscope)<br>
+						Michael Stauffacher (ETH – USYS TdLab)<br>
+						Marcus Schaub (WSL – Walddynamik)<br>
+						Rainer Schulin (ETH – Institut für Terrestrische Ökosysteme)
+						<br><br>
+						www.soundingsoil.ch
+						<br><br>
+						Kontakt: marcus.maeder@zhdk.ch
+
+					</p>
+				</div>
+				<div class="ucol"></div>
+
+			</div> <!-- end of tab-bodenhoeren -->
+
+
+			<div class="tab-content" id="tab-bodenwissen">
+				<div class="ucol"></div>
+				<div class="column1" id="col1">
+					<p class="coltext">
+						<b>Der Boden lebt: Entstehung, Funktionen und Nutzung des Erdreichs</b><br><br>
+						Reine Luft, sauberes Wasser und lebendige, vielfältige Wälder sowie Biodiversität: Das sind die
+						Ökosysteme, die wir schützen wollen, denn sie dienen uns als essentielle Lebensgrundlage. Aber
+						was
+						ist mit dem Boden auf dem wir stehen? Mit seinen Eigenschaften und unzähligen Lebewesen erbringt
+						er
+						wertvolle Dienstleitungen für Mensch und Natur. Ein Grund, sich näher mit dem Thema Boden und
+						Bodenlebewesen zu beschäftigen.<br>
+					</p>
+					<img src="image/waldbodenlebt.jpg" id="colbild3">
+					<p class="collegende">
+						<br>Ein gesunder Boden ist von unzähligen Lebewesen bewohnt, die alle eine bestimmte Rolle
+						einnehmen.
+					</p>
+					<p class="coltext">
+						<br><b>Was ist Boden und wie entsteht er?</b><br><br>
+						Boden ist die belebte oberste Schicht der Erdkruste, die wenige Zentimeter bis Meter dick sein
+						kann.
+						Je nach Ausgangsgestein, Vegetation, Klima, Witterung, anthropogenen Einflüssen und Bodenleben
+						teilt
+						sich ein Boden in mehrere Horizonte auf, die von der Bodenoberfläche bis zum Ausgangsgestein
+						reichen. Für die Entstehung von 1 Meter Boden vergehen rund 10 000 – 20 000 Jahre. In unseren
+						Breitengraden wird etwa 0,1 mm neuer Boden pro Jahr gebildet. Die oberste Bodenschicht besteht
+						aus
+						Humus, der durch die Zersetzung und Verwitterung von Pflanzenrückständen entsteht und besonders
+						reich an Nährstoffen ist.
+						<br><br>
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col2">
+					<p class="coltext">
+						<!-- • -->
+						<b>Welche Funktionen und Leistungen übernimmt der Boden?</b><br><br>
+						&#9679 Filtrierung, Speicherung und Regulation von Wasser und Nährstoffen
+						<br> Wie ein Schwamm ist der Boden mit einem Porensystem durchsetzt. Er speichert Nährstoffe und
+						Regenwasser, das er langsam an Gewässer und Pflanzen abgibt und so Überschwemmungen vorbeugt.
+						Ein
+						gesunder Boden filtert und bindet Schadstoffe und schützt das Grundwasser vor Verunreinigungen.
+						40%
+						des Schweizer Trinkwassers wird übrigens aus Grundwasser gewonnen.
+						<br><br>&#9679 Speicherung von Kohlenstoff
+						<br>Böden sind in der Lage, enorme Mengen an CO2 zu speichern. Aber nicht jeder Boden speichert
+						gleich viel Kohlenstoff. Nutzung, klimatische Bedingungen, Bodenart und dem damit verbundenen
+						Bodenleben sowie der Humusgehalt wirken sich auf den CO2-Gehalt eines Bodens aus. Ein Hektar
+						Ackerboden kann etwa 110 t Kohlenstoff speichern, Grünland speichert bis zu 160 t pro Hektar und
+						Moore, die lediglich 3 % der Erdoberfläche bedecken, speichern rund 30 % des gesamten in der
+						Erde
+						gebundenen Kohlenstoffs. Es gilt die Regel: je humusreicher ein Boden ist, desto mehr CO2
+						speichert
+						er. Die Gesundheit der Böden ist demnach ein wichtiger Faktor, um den Klimawandel zu begrenzen.
+						<br><br>&#9679 Lebensraum für Tiere und Pflanzen
+						<br>In einer Hand voll Boden leben mehr Organismen als Menschen auf der gesamten Erde. Ein
+						Grossteil
+						sind für uns unsichtbare Bakterien, Pilze und Algen. Schaut man genau hin, entdeckt man
+						vielleicht
+						die 1 – 2 mm kleinen Springschwänze. Zu den etwas grösseren und bekannteren Bodenbewohnern
+						zählen
+						Regenwürmer, Tausendfüssler oder Schnecken. Zusammen helfen sie durch Zerkleinern, Zersetzen und
+						Verdauen von Streu, nährstoffreichen Humus zu bilden. Regenwürmer sind beispielswiese für eine
+						gesunde Bodenstruktur unersetzbar, denn sie sorgen durch ihre Grabaktivitäten und Ausscheidungen
+						für
+						eine stabile Bodenstruktur. Dies wirkt der Erosion entgegen. Ohne diese Bodenlebewesen wäre die
+						Produktion von Nahrungsmittel auf Böden nicht möglich. Regenwürmer dienen übrigens als
+						Indikatororganismen für die Bewertung der Bodenfruchtbarkeit.
+					</p>
+					<div class="wrapper">
+						<div class="kasten">
+							<p class="textkasten">
+								<p class="coltext">
+									Am Beispiel Waldboden, der im Gegensatz zu landwirtschaftlich bewirtschafteten Böden
+									weder gedüngt noch gepflügt wird, zeigt sich die Bedeutung des Bodens mit seinen
+									Bewohnern für das gesamte Ökosystem besonders deutlich. Mehr zu Vielfalt und
+									Funktion
+									von Bodenlebewesen im Wald.
+								</p>
+							</p>
+						</div>
+					</div>
+					<p class="coltext">
+						<br>&#9679 Nahrungsmittelproduktion
+						<br>90 % unserer Nahrungsmittel werden entweder direkt oder indirekt für die Nutztierfütterung
+						auf
+						Böden erzeugt. Auf 1 Hektar Boden kann eine Jahresration Brot für 120 Menschen produziert und 2
+						Menschen mit Milch und Fleisch (westeuropäischer Standard) ernährt werden. Insgesamt wird ein
+						Drittel aller Böden dieser Welt für die Nahrungsmittelproduktion bewirtschaftet. Gerade in stark
+						bevölkerten Ländern wie der Schweiz, ist er eine knappe und wertvolle Ressource.
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col3">
+					<p class="coltext">
+						<div class="slideshow-container">
+
+							<div class="mySlides fade">
+								<img src="image/sosodoppelfuesser.jpg" style="width:100%; height:40%;">
+								<div class="text1">
+									<p class="coltext"><br>Doppelfüsser ernähren sich vorwiegend von pflanzlichen
+										Resten.<br><br><br></p>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<img src="image/sosopilz.jpg" style="width:100%; height:40%;">
+								<div class="text1">
+									<p class="coltext"><br>Pilzfäden, die den Boden durchwachsen, sorgen für eine
+										verbesserte Nährstoffaufnahme.<br><br><br></p>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<img src="image/sosospringschwaenze.jpg" style="width:100%; height:40%;">
+								<div class="text1">
+									<p class="coltext"><br>Springschwänze gehören zu den Urinsekten und fressen
+										vorwiegend
+										verrottendes Pflanzenmaterial.<br><br></p>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<img src="image/sosopseudoskorpion.jpg" style="width:100%; height:40%;">
+								<div class="text1">
+									<p class="coltext"><br>Pseudoskorpione leben räuberisch und können bis zu vier
+										Millimeter grosse Beutetiere erlegen.<br><br><br></p>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<img src="image/sosoregenwurm.jpg" style="width:100%; height:40%;">
+								<div class="text1">
+									<p class="coltext"><br>Regenwürmer fressen kleine Erdpartikel, tierische und
+										pflanzliche
+										Abfallstoffe, Humusstoffe, Bakterien, Algen und Pilze.<br><br></p>
+								</div>
+							</div>
+
+							<div class="mySlides fade">
+								<img src="image/sosohornmilbe.jpg" style="width:100%; height:40%;">
+								<div class="text1">
+									<p class="coltext"><br>Hornmilben spielen eine wichtige Rolle bei der
+										Streuzersetzung.<br><br><br></p>
+								</div>
+							</div>
+						</div>
+
+						<p class="coltext">
+							<b>Gefahren für unsere Böden</b><br><br>
+							Die grössten Gefahren für den Boden stellen eine intensive und einseitige Nutzung durch den
+							Menschen und der Klimawandel dar. Besonders die intensive Forst- und Landwirtschaft macht
+							unseren Böden zu schaffen. Monokulturen, mineralische Dünger, synthetische Pestizide und der
+							häufige Einsatz schwerer Maschinen können das Bodengefüge zerstören, laugen die Böden aus
+							und
+							vergiften das natürliche Ökosystem. Aber auch unser Konsumverhalten verlangt dem Boden
+							einiges
+							ab. Der steigende Fleischkonsum, der hohe Bedarf an Energiepflanzen und nicht zuletzt Food
+							Waste
+							verschlingen wertvolle Landfläche, die oft viel effizienter und nachhaltiger genutzt werden
+							könnten.
+							<br><br>Der Klimawandel wird unter anderem auch von der Landwirtschaft angeheizt. Sie ist
+							für
+							etwa ein Viertel der globalen Treibhausgasemission verantwortlich. Die Auswirkungen spüren
+							wir
+							bereits heute. In manchen Regionen der Erde ist es so trocken geworden, dass weit und breit
+							kein
+							Grün mehr zu sehen ist. Unwetter und Überschwemmungen nehmen von Jahr zu Jahr zu. Fruchtbare
+							Böden erodieren zunehmend, was sich auch in kleiner werdenden Ernteerträgen wiederspiegelt.
+							Allein in der Schweiz gehen jedes Jahr 840'000 t Boden buchstäblich den Bach runter und
+							schätzungsweise rund ein Drittel der Landwirtschaftsböden sind durch schwere Maschinen
+							verdichtet. Ein weiteres Problem stellt die Bodenversiegelung durch Wohnungsbau, Industrie,
+							Gewerbe und den Aufbau von Infrastruktur dar.
+						</p>
+
+					</p>
+				</div>
+				<div class="ucol"></div>
+			</div> <!-- end of tab-bodenhoeren -->
+
+
+			<div id="tab-bodenbewusst" class="tab-content">
+				<div class="ucol"></div>
+				<div class="column " id="col2">
+					<p class="coltext">
+						<b>Unseren Böden geht es immer schlechter</b><br><br>
+						In der Schweiz steht der Boden unter enormen Druck. Das zeigt ein Bericht des BAFU aus dem Jahr
+						2017
+						zum Zustand der Böden. Steigende Stickstoffeinträge durch die intensive Landwirtschaft führen
+						zur
+						Überdüngung und Versauerung der Böden. Der Bau von Strassen, Siedlungen und Wirtschafts- und
+						Industriegebäuden versiegelt pro Sekunde einen halben Quadratmeter Schweizer Boden, oftmals die
+						besten ackerfähigen Kulturlandböden. Klimawandelbedingte Wetterkapriolen wie lange
+						Trockenperioden
+						oder Starkniederschläge und die Übernutzung des Bodens durch die Landwirtschaft geben ihm den
+						Rest:
+						Erosion, also der Verlust von fruchtbarem Boden, oder die Verdichtung der Böden durch schwere
+						Maschinen sind mögliche Folgeschäden. Das Bewusstsein dafür, dass Böden für die Gesellschaft und
+						Umwelt essentielle Leistungen erbringen, ist immer noch gering (siehe Artikel Bodenwissen). In
+						der
+						Politik wird zwar das Thema Boden in Bezug auf Ernährungssicherheit und Kulturlandschutz gross
+						geschrieben; wichtige Leistungen, die das Ökosystem Boden für uns erbringt, wie etwa
+						Wasserspeicherung für Pflanzen und Filtrierung von Trinkwasser oder das Speichern von
+						klimaschädlichem CO2, sind leider noch nicht in den Fokus der Diskussionen geraten. Wird dem
+						Schutz
+						des Boden nicht schleunigst mehr Rechnung getragen, prognostizieren Forscher (Studie des IPBES),
+						dass 700 Millionen Menschen wegen vertrockneter und ausgelaugter Böden ihre Heimat verlassen
+						werden
+						müssen.
+						<br><br>
+					</p>
+					<img src="image/marktstand.jpg" id="colbild5">
+				</div>
+				<div class="ucol"></div>
+				<div class="column1" id="col1">
+					<p class="coltext">
+						<b>Wie können wir den Boden schützen?</b><br><br>
+						Der Boden mit seinen zahlreichen Funktionen und Ökosystemdienstleitungen muss noch besser
+						geschützt
+						und nachhaltiger genutzt werden, damit auch künftige Generationen von gesundem Boden profitieren
+						können. <br><br>
+						Politik und Vereinte Nationen:
+						<br>Die Agenda 2030 mit ihren 17 nachhaltigen Entwicklungszielen berücksichtigt mit dem Ziel 15
+						„Leben an Land“ unter anderem den Schutz des Bodens: „Landökosysteme schützen, wiederherstellen
+						und
+						ihre nachhaltige Nutzung fördern, Wälder nachhaltig bewirtschaften, Wüstenbildung bekämpfen,
+						Bodenverschlechterung stoppen und umkehren und den Biodiversitätsverlust stoppen“. Allerdings
+						geht
+						keines der 9 Unterziele konkret auf das Thema Boden ein. Lediglich im Unterziel 15.3 findet der
+						Boden Erwähnung im Nebensatz. Auch wenn der Schweizer Länderbericht zur Umsetzung der Agenda
+						2030
+						bereits an der UNO in New York präsentiert wurde, fehlen nach wie vor konkrete Massnahmen. Das
+						Netzwerk SDSN Switzerland reagierte bereits im Juli 2018 mit dem Dokument „Stellschauben für
+						eine
+						nachhaltige Zukunft der Schweiz“, welches konkrete Handlungsempfehlungen für die Politik gibt.
+						<br><br>Landwirtschaft:
+						<br>Moderne, konventionelle Landwirtschaft, wie sie heute betrieben wird, ist in viele Fällen
+						nicht
+						nachhaltig. Der Einsatz von synthetischen Düngern und chemischen Pestiziden stört den
+						natürlichen
+						Nährstoffhaushalt des Bodens und bedroht die Biodiversität. Schwere Maschinen verdichten den
+						Boden
+						und zerstören den Lebensraum wichtiger Bodenorganismen. Die industrielle Tierhaltung benötigt
+						riesige Mengen an Land zur Futterproduktion und verursacht einen Überschuss an organischem
+						Dünger,
+						welcher auf dem Boden „entsorgt“ wird. Das Vorantreiben nachhaltiger, ökologischer
+						Landwirtschaftsmethoden könnte die Bodenverschlechterung verlangsamen und erodierte Böden wieder
+						regenerieren. Hierzu zählen insbesondere agrarökologische Methoden mit ausgeklügelten und doch
+						einfachen Mischkultur- und Agroforstsystemen, Permakultur, angepassten Fruchtfolgen mit
+						ausgeglichenen Stoffkreisläufen u.v.m. Es müssen mehr Anreize geschaffen werden, damit
+						Landwirtschaftsflächen nachhaltiger bewirtschaftet werden.
+						<br><br>KonsumentInnen:
+						<br>Für die Lebensmittelproduktion sind wir auf gesunde Böden angewiesen. Grundlage dafür ist
+						eine
+						Vielzahl verschiedener Lebewesen. Bei der biologischen Landwirtschaft wird der Boden schonend
+						bearbeitet, um die Lebewesen und die Bodenstruktur nicht zu verletzten. Die Erosion wird dadurch
+						minimiert, so dass die Nährstoffe im Boden bleiben und nicht ausgewaschen werden. Biobäuerinnen
+						und
+						-bauern setzen keine chemisch-synthetischen Dünger und Pflanzenschutzmittel ein. Wenn wir bei
+						unserem täglichen Einkauf auf Bioprodukte setzen, tragen wir dazu bei, dass unsere Böden
+						gesünder
+						sind und es auch bleiben.<br>
+						<br>Eine Studie der University of Maryland, USA, aus dem Jahr 2017 zeigt, dass die Schweizer
+						Bevölkerung für ihr derzeitiges Konsumverhalten nicht genug Land zur Verfügung hat. Um den
+						Bedarf an
+						Nahrungsmitteln zu decken, muss auf 45 – 50 % ausländische Flächen zurückgegriffen werden. Wir
+						sollten verstärkt regional produzierte Lebensmittel, die gerade Saison haben, kaufen. So
+						unterstützen wir die einheimischen ProduzentInnen und reduzieren Treibhausgasemissionen, da
+						lange
+						Transportwege wegfallen und weniger Fläche im Ausland benötigt wird.<br>
+						<br>Der Wert von gesunden Nahrungsmitteln sollte sich auch im Kaufverhalten wiederspiegeln. Ein
+						Schweizer Haushalt gibt aber im Durchschnitt gerade noch rund 6 % des Einkommens für
+						Nahrungsmittel
+						aus. Billige Lebensmittel bedeuten einen hohen ökonomischen Druck auf das System Landwirtschaft
+						und
+						damit indirekt auch einen hohen Druck auf die Böden.<br>
+						<br>In unserem alltäglichen Leben können wir den Boden erhalten und schützen. Sie als
+						Konsumentin
+						oder Konsument bestimmen mit ihrem Kaufverhalten mit, dass eine nachhaltige Landwirtschaft in
+						der
+						Schweiz sich durchsetzen kann: saisonale und regionale Produkte, möglichst aus biologischem
+						Anbau
+						und auch öfters mal auf Fleisch verzichten.
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col3">
+					<p class="coltext">
+						HobbygärtnerInnen:
+						<br>Ob im Schrebergarten, Hausgarten oder auf dem Balkon, jeder Pflanzenliebhaber kann beim
+						Bodenschutz helfen. Biogärten tragen zur Erhaltung der Biodiversität an Land und im Boden bei.
+						Die
+						Kompostierung spielt in Hobbygärten eine wichtige Rolle, denn im Kompost werden Gemüse- und
+						Früchtereste zu wertvollem, näherstoffreichem Humus umgewandelt, der dann dem Boden zugeführt
+						werden
+						kann. Auf torfhaltige Erde sollte verzichtet werden, denn diese wird aus Mooren, die ja
+						bekanntlich
+						viel CO2 speichern, gewonnen. Inzwischen existieren zahlreiche Ratgeber, Blogs und Dokus, die
+						einem
+						beim naturnahen, biologischen Gärtnern unterstützen.
+						<br><br>
+					</p>
+					<img src="image/schrebergarten.jpg" id="colbild4">
+					<p class="coltext">
+						<br><br><b>Fazit</b><br><br>
+						Unsere Gesellschaft ist abhängig von gesunden Böden, mehr als 90% unserer Lebensmittel wachsen
+						auf
+						ihnen. Wir, das sind etwa die Zivilgesellschaft, die Politik, die Industrie und die
+						Landwirtschaft,
+						besitzen Mittel und Wege, den Boden zu schützen und für künftige Generationen zu erhalten. Es
+						muss
+						noch mehr Aufklärungsarbeit rund um das Thema Bodenschutz geleistet werden und
+						EntscheidungsträgerInnen in Politik und Industrie müssen endlich handeln und Massnahmen
+						ergreifen.
+						Es ist noch nicht zu spät, aber höchste Zeit der kostbaren Ressource Boden mehr Aufmerksamkeit
+						und
+						Schutz zu schenken.
+					</p>
+				</div>
+				<div class="ucol"></div>
+
+			</div> <!-- end of tab-bodenbewusst -->
+
+
+			<div id="tab-english" class="tab-content">
+				<div class="ucol"></div>
+				<div class="column1" id="col1">
+					<img src="image/bild1.jpg" id="colbild1">
+					<p class="collegende">
+						<br>What happens under the surface?
+					</p>
+					<p class="coltext">
+						<br><b>Soils and their perception</b><br><br>
+
+						Soils present themselves to us mostly as differently composed surfaces, with that which is
+						underneath escaping our perception. Soil ecosystems are complex and their biotic interactions
+						closely interwoven. Soils are highly sensitive to any disturbances, be they human farming
+						systems or forest management. Healthy soils are of key importance, because they provide
+						indispensable ecosystem services; soil systems filter and regulate water, provide nutrient
+						cycles, deplete toxic substances etc. Sustainably managed soils enhance the resilience of
+						agricultural systems and are better able to adapt to changing climatic conditions while also
+						contributing to the reduction of greenhouse gases in the atmosphere by carbon sequestration.
+						<br><br>
+
+						In contrast, soil degradation has increased over recent decades—not only in its spectacular
+						form in the tropics, with immense land loss through deforestation and erosion, but directly at
+						our front door, on the fields where our food is being produced, through pollution with mineral
+						fertilizers, pesticides and antibiotics, and through soil compaction with increasingly heavy
+						machinery.
+						<br><br>
+
+						There seems to be a basic perception problem behind these environmental issues; the
+						pedosphere and its functions or state of health cannot easily or instantly be translated into a
+						sensual experience. It is a black box that needs to be opened up and interpreted by experts,
+						and their findings must then be mediated to “nonexperts.” For the most part, the ground at our
+						feet is not an object of our observation or contemplation; it is just there and is being treated
+						like some dead mass, because it eludes our direct perception. Increasing awareness of soil
+						ecosystems is therefore an important issue.
+						<br><br>
+
+						In ecoacoustics, soundscape ecology or acoustic ecology, audio recordings are used to analyze
+						ecological relationships. Almost every organism produces sound waves as its life
+						manifestation. Be it movement activity or communication, we can potentially hear which
+						organism does what under which circumstances on the one hand, and we may contextualize
+						the organism’s activity with the sounds of the environment on the other.
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col2">
+					<p class="coltext">
+						<b>What can you hear in the soil?</b><br><br>
+
+						A healthy soil is home to a wide range of fauna and flora. It ensures the basic soil functions
+						such as the decomposition of vegetable litter and nutrient cycling. The more diverse the
+						creatures living in the soil are, then the higher is the functional redundancy of the ecosystem,
+						i.e., if individual species are missing, their function can be taken up by other species in the
+						soil. Soil fauna come in different sizes – ranging from bacteria and nematodes (roundworms),
+						known as microfauna, to macro- and megafauna, such as beetles, earthworms and moles,
+						thereby spanning a complex network of interactions and nutritional dependencies. With our
+						acoustic equipment, we can primarily hear the meso- and macro- soil fauna, i.e. all the
+						animals larger than half a millimetre. Meso- and macrofauna perform important functions in
+						the soil – these organisms shred plant residues, prey on other soil fauna and loosen the soil by
+						burrowing. A large diversity in meso- and macrofauna reflects a healthy ecosystem.
+						<br><br>
+
+						This sound map contains the recordings of soil fauna such as springtails, mites, centipedes,
+						beetles, isopods, fly larvae, earthworms, spiders, orthoptera (grasshoppers) and cicadas. We
+						took soil samples from all the recording locations of the research project (large dots) and
+						identified and counted the animal species. The majority of soil fauna make noises when
+						moving through the soil or eating. A few also make use of the soil to communicate with each
+						other. Some of the animals live in the litter layer - the decomposing plant material lying on
+						the surface of the soil. In addition, animals can also be heard who live on the soil, using it
+						as a
+						communication medium by generating vibrations that can be picked up by their conspecifics
+						via the legs or body.
+						<br><br>
+
+						Soil fauna produce different noises – according to the size and structure of their body as well
+						as their behaviour: the greater the variety of animal sounds you can hear in a recording, the
+						more diverse is the soil fauna. This can also be acoustically measured and statistically
+						evaluated. In the Sounding Soil research project, we have attempted to acoustically measure
+						soil biodiversity based on what are known as acoustic indices. We have already been able to
+						identify distinct differences at the various locations of this sound map. For example,
+						conventionally managed arable land is quieter and exhibits fewer different noises than an
+						organically managed meadow. Forest soil is also rather quieter, since this type of soil is
+						generally cooler and the soil fauna there are less active than in a sun-kissed meadow.
+						<br>
+					</p>
+					<img src="image/bild2.jpg" id="colbild2">
+					<p class="collegende">
+						<br>Mobile recording equipment
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col3">
+					<p class="coltext"><br>
+						Often it is not only the noises of soil fauna that can be heard but also physical sources, such
+						as
+						rain as it hits the ground and seeps away, or wind moving the vegetation on the soil surface
+						that is audible as a rumbling in the soil. Furthermore, other environmental noise can also be
+						heard in the soil. Thus the vibrations from building sites and the proximity of roads adversely
+						affect acoustic recordings and measurements in the soil – this is particularly the case with
+						aircraft noise, the deep roaring sound of which can drown out the noises made by soil
+						organisms. The effects of acoustic environmental pollution on the distribution, activity and
+						composition of soil fauna remain totally unexplored. Nevertheless, however, it must be
+						assumed that environmental noise produced by humans not only has a negative impact on
+						aboveground and maritime fauna but also on the animal communities living in the soil.
+						<br><br>
+						A further element of the Sounding Soil sound installation is the music that starts to play when
+						no soil sounds are selected in the sound map to listen to. It consists of sound patterns that
+						are
+						distributed at three levels of the loudspeaker system in the container. The individual sound
+						patterns
+						are controlled both by sensors in the soil and the weather station on the roof of the container.
+						Readings such as the intensity of the sunlight, the amount of rain, the surface and soil
+						temperature
+						as well as the soil moisture control the music while making it possible for the microclimatic
+						factors
+						and their interactions, which influence the activity of the soil fauna, to be heard and
+						experienced.
+						In this way, depending on the time of day, weather and season, a generative composition is
+						created,
+						which only changes extremely slowly – in analogy to the soil matrix, which acts as a buffer by
+						reacting very slowly to environmental changes.<br><br>
+					</p>
+					<p class="coltext">
+						<b>The research project Sounding Soil</b><br><br>
+
+						Sounding Soil is an inter- and transdisciplinary research and art project that investigates the
+						acoustics of soil ecosystems. In this study, methods to record and measure the acoustic
+						activity and composition of soil organisms are being developed with the objective of assessing
+						biodiversity in soils rapidly and affordably by acoustic means. Recordings of the soil fauna
+						will be part of a participatory art installation and a citizen science project. The project aims
+						to
+						create a first-hand experience of soil ecosystems and increase soil awareness in broader parts
+						of society, be they the urban population, agricultural producers or political decision makers.
+						<br><br>
+
+						Sounding Soil is carried out as a cooperation between the Zurich University of the Arts
+						(ZHdK)/the Institute for Computer Music and Sound Technology, the Swiss Federal Institute
+						for Forest, Snow and Landscape Research WSL, the Swiss Soil Monitoring Network
+						(NABO), the Institute for Terrestrial Ecosystems as well as the USYS TdLab at the Swiss
+						Federal Institute of Technology (ETH) in Zurich and Biovision Foundation for Ecological
+						Development.
+						<br><br><br>
+
+						<b>Project Team:</b>
+						<br><br>
+						Stefan Diener (Biovision – Sensibilisation, contacts Africa)<br>
+						David Fritz (Biovision – Communications)<br>
+						Martin Gossner (WSL – Forest Entomology)<br>
+						Martin Grossenbacher (Biovision – Public Relations)<br>
+						Xianda Guo (ETH – Master student)<br>
+						Sabine Lerch (Biovision – Project coordinator)<br>
+						Peter Lüthi (Biovision – Public Relations)<br>
+						Marcus Maeder (ZHdK/ICST – PI, Ecoacoustics, Artistic Research)<br>
+						Michael Müller (NABO/Agroscope – Modelling &amp; Monitoring)<br>
+						Martin Neukom (ZHdK/ICST – Implementation Acoustic Indices)<br>
+						Alexandra Pellanda (Biovision – Communications)<br>
+						Sébastien Schiesser (ZHdK/ICST, Micro-Engineering)<br>
+						Doris Schneider Mathys (WSL – Entomological lab)<br>
+						Annalena Tinner (ETH – Master student)<br>
+						Marco Walser (WSL – Field measurements, coordination LWF plots)<br>
+						Simone Zuber (Biovision – Fund raising)<br>
+						<br><br><br>
+
+						Scientific supervision:
+						<br><br>
+						Armin Keller (NABO/Agroscope)<br>
+						Michael Stauffacher (ETH – USYS TdLab)<br>
+						Marcus Schaub (WSL – Forest dynamics unit)<br>
+						Rainer Schulin (ETH – Institute for Terrestrial Ecosystems)
+					</p>
+				</div>
+				<div class="ucol"></div>
+			</div> <!-- end of tab-english -->
+
+
+			<div id="tab-kontakt" class="tab-content">
+				<div class="ucol"></div>
+				<div class="column1" id="col1">
+					<p class="coltext">
+						Zürcher Hochschule der Künste ZHdK<br>
+						Institute for Computer Music and Sound Technology ICST<br>
+						Marcus Maeder<br>
+						Toni-Areal<br>
+						Pfingstweidstrasse 96<br>
+						CH-8031 Zürich<br>
+						Telefon +41 43 446 55 05<br>
+						marcus(Punkt)maeder(at)zhdk.ch<br>
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col2">
+					<p class="coltext">
+						Sounding Soil ist ein Projekt von folgenden Partnern:<br><br>
+						Zürcher Hochschule der Künste ZHdK – Institute for Computer Music and Sound Technology
+						ICST<br><br>
+						Biovision Stiftung für nachhaltige Entwicklung<br><br>
+						Nationale Bodenbeobachtung NABO an der Agroscope<br><br>
+						Eidg. Forschungsanstalt für Wald, Schnee und Landschaft WSL<br><br>
+						ETH Zürich, USYS TdLab und Institut für Terrestrische Ökosysteme<br><br>
+					</p>
+				</div>
+				<div class="ucol"></div>
+				<div class="column" id="col3">
+				</div>
+				<div class="ucol"></div>
+			</div> <!-- end of tab-kontakt -->
+
+
+		</div> <!-- end of tabs-container -->
+
+	</section>
+
+
+	<script type="text/javascript" src="javascript/js.js"></script>
+
+</body>
+
+</html>
