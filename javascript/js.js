@@ -3,6 +3,22 @@ in firefox open about:config, change
 
 full-screen-api.warning.delay = -1
 full-screen-api.warning.timeout = 0
+
+app.update.auto false
+
+policies.json in Firefox.app/Contents/Resources/
+
+{
+  "policies": {
+    "DisableAppUpdate": true,
+    "DisableFirefoxStudies": true,
+    "DisableSystemAddonUpdate": true,
+    "DisableTelemetry": true,
+    "ExtensionUpdate": false
+  }
+}
+
+
 */
 
 
